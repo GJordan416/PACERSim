@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Login to Fictional PACER</h1>
+  </header>
+  <main>
+    <form id="loginForm">
+      <h2>Login</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Login</button>
+      <p id="loginMessage"></p>
+    </form>
+    <form id="registerForm">
+      <h2>Register</h2>
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" required>
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" required>
+      <button type="submit">Register</button>
+      <p id="registerMessage"></p>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2024 Fictional PACER</p>
+  </footer>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username === 'admin' && password === 'admin') {
+        document.getElementById('loginMessage').textContent = 'Login successful!';
+        window.location.href = "search.html";
+      } else {
+        document.getElementById('loginMessage').textContent = 'Invalid credentials.';
+      }
+    });
+
+    document.getElementById('registerForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const newUsername = document.getElementById('newUsername').value;
+      const newPassword = document.getElementById('newPassword').value;
+      document.getElementById('registerMessage').textContent = `User ${newUsername} registered!`;
+    });
+  </script>
+</body>
+</html>
