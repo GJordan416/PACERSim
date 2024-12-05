@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Case Management</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Assigned Cases</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Case ID</th>
+            <th>Case Name</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023-001</td>
+            <td>John Doe vs. Jane Smith</td>
+            <td>Pending</td>
+            <td><button onclick="viewCase('2023-001')">View</button></td>
+          </tr>
+          <tr>
+            <td>2023-002</td>
+            <td>State vs. Acme Corp.</td>
+            <td>In Progress</td>
+            <td><button onclick="viewCase('2023-002')">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Fictional Judicial PACER</p>
+  </footer>
+  <script>
+    function viewCase(caseId) {
+      alert(`Viewing details for Case ${caseId}`);
+    }
+  </script>
+</body>
+</html>
