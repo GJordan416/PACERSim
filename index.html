@@ -3,39 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Finder</title>
+  <title>Fictional PACER</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Case Finder</h1>
-    <p>Search for fictional court cases in our demo database.</p>
+    <h1>Fictional PACER</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="login.html">Login/Register</a></li>
+        <li><a href="search.html">Search Cases</a></li>
+        <li><a href="billing.html">Billing</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <section class="login-section">
-      <h2>Admin Login</h2>
-      <form id="loginForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Login</button>
-        <p id="loginMessage"></p>
-      </form>
-    </section>
-    <section class="search-section">
-      <h2>Case Search</h2>
-      <form id="searchForm">
-        <label for="caseId">Case ID:</label>
-        <input type="text" id="caseId" name="caseId" placeholder="Enter case ID">
-        <button type="submit">Search</button>
-        <p id="searchResult"></p>
-      </form>
+    <section>
+      <h2>Welcome to Fictional PACER</h2>
+      <p>Explore and search for fictional court cases for educational purposes.</p>
+      <a href="search.html" class="btn">Search Cases</a>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Fictional Court Database</p>
+    <p>&copy; 2024 Fictional PACER. Not an official service.</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
